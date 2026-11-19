@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "engine",
+      "runtimeExecutable": ".venv/bin/python",
+      "runtimeArgs": ["main.py", "serve", "--port", "8765"],
+      "port": 8765
+    },
+    {
+      "name": "ui-web",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "ui", "run", "dev:web", "--", "--host", "127.0.0.1"],
+      "port": 5173
+    }
+  ]
+}
