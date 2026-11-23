@@ -2,7 +2,7 @@
 #   QUICK SETUP — edit these lines, ignore everything below
 # ==============================================================
 
-model: openrouter/google/gemma-4-26b-a4b-it        # your AI model (see: python main.py models)
+model: gemma3:12b        # your AI model (see: python main.py models)
 channel: ""            # your channel, e.g. "@YourHandle"
 
 content_language: auto # language of the streams you clip: auto = detect per
@@ -54,8 +54,8 @@ whisper:
 # the default. Or send the audio, on YOUR OWN API key, to a provider that
 # returns word timings: openai / openrouter / xai. Set it in Settings → AI.
 transcription:
-  backend: openrouter
-  model: "openai/whisper-large-v3-turbo"
+  backend: local
+  model: ""
 
 clips:
   min_score: 55         # discard candidates scored below this (0-100).
@@ -147,4 +147,4 @@ feedback:
   relay_url: "https://clips-studio-feedback.clipsstudio.workers.dev"
 
 paths:
-  data_dir: data
+  data_dir: "D:/ClipsKitty/data"
