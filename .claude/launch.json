@@ -2,27 +2,27 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "engine",
-      "runtimeExecutable": ".venv/bin/python",
-      "runtimeArgs": ["main.py", "serve", "--port", "8765"],
-      "port": 8765
-    },
-    {
       "name": "engine-win",
       "runtimeExecutable": ".venv/Scripts/python.exe",
-      "runtimeArgs": ["main.py", "serve", "--port", "8765"],
+      "runtimeArgs": [
+        "main.py",
+        "serve",
+        "--port",
+        "8765"
+      ],
       "port": 8765
     },
     {
       "name": "ui-web-win",
       "runtimeExecutable": "C:/Program Files/nodejs/node.exe",
-      "runtimeArgs": ["ui/node_modules/vite/bin/vite.js", "ui/src/renderer", "--config", "ui/vite.config.mts", "--host", "127.0.0.1"],
-      "port": 5173
-    },
-    {
-      "name": "ui-web",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["--prefix", "ui", "run", "dev:web", "--", "--host", "127.0.0.1"],
+      "runtimeArgs": [
+        "ui/node_modules/vite/bin/vite.js",
+        "ui/src/renderer",
+        "--config",
+        "ui/vite.config.mts",
+        "--host",
+        "127.0.0.1"
+      ],
       "port": 5173
     }
   ]
