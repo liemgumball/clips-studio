@@ -27,6 +27,9 @@ yt-dlp-ejs==0.8.0
 # interchangeable with another MFCC implementation.
 python_speech_features>=0.6,<1
 faster-whisper>=1.2.1,<2
+# PyAV 19 dropped av.open(metadata_errors=...), which faster-whisper 1.2.1
+# still passes when it decodes audio, so transcription fails on 19.x.
+av>=16,<19
 # faster-whisper's engine (CTranslate2) is a CUDA 12 build and needs cuBLAS 12
 # on an NVIDIA GPU; PyTorch's CUDA 13 build only has cuBLAS 13. Without this,
 # Whisper falls back to the CPU (issue #111). Windows only: that's where the
